@@ -1,0 +1,9 @@
+Juliusz Radziszewski, s193504
+Interpretacja wyników:
+ - Dla x0 = 6.0: Funkcja fzero poprawnie poradziła sobie z wyznaczeniem miejsca zerowego funkcji tangens. Najbliższym miejscem zerowym jest 2Pi,
+co pokrywa się z przybliżeniem wyznaczonym przez funkcję: 6.28319. Początkowo funkcja szuka przedziału w którym doszło do zmiany znaku, a następnie
+w okrojonym już zakresie przybliża się stopniowo do rozwiązania rzeczywistego, wykorzystując poszczególne, wybrane przez siebie funkcje.
+
+- Dla x0 = 4.5: Funkcja niepoprawnie wyznaczyła miejsce zerowe - gdyż wskazała wartość 3/2Pi (4,7124), czyli miejsce w którym funkcja tangens przyjmuje
+nieokreśloną wartość. Przyczyną takiego stanu rzeczy jest mylne przyjęcie, że jeśli funkcja w danym przedziale zmienia znak, to musi być tam miejsce zerowe.
+Wyznaczony został przedział, w którym faktycznie następuje zmiana znaku, ale w rzeczywistości nie istnieje tam miejsce, gdzie funkcja przyjmuje wartość 0.

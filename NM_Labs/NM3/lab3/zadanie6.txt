@@ -1,0 +1,23 @@
+Juliusz Radziszewski, 193504
+Informatyka, sem. IV
+Obserwacje dotyczące zadania 6 - analiza elektromagnetyczna filtru mikrofalowego.
+Po wykonaniu obliczeń trzema sposobami - metodą bezpośrednią, metodą Jacobiego oraz metodą Gaussa-Seidla otrzymałem poniższe wyniki:
+
+Błąd dla metody bezpośredniej: 7.0636e-13
+Czas dla metody bezpośredniej: 0.18657
+Błąd dla metody Jacobiego: Inf
+Czas dla metody Jacobiego: 0.64749
+Liczba iteracji dla metody Jacobiego: 617
+Błąd dla metody Gaussa-Seidla: 64367347963.3911
+Czas dla metody Gaussa-Seidla: 78.1438
+Liczba iteracji dla metody Gaussa-Seidla: 1000
+
+W archiwum ZIP załączone są również wykresy prezentujące rosnący błąd względem iteracji (zadanie6v1.png, zadanie6v2.png).
+Jak można zauważyć, jedynie metoda bezpośrednia poprawnie poradziła sobie z wyznaczonym zadaniem i błąd residualny jest bardzo mały.
+Wartości owego błędu przy metodach iteracyjnych nie zbiegają się i dążą do nieskończoności, przy czym metoda Jacobiego wypadała gorzej, gdyż już przy
+617 iteracjach algorytmu wartość wynosiła Inf w programie Matlab.
+Tym samym można dojść do wniosku, iż metody iteracyjne nie zawsze zwrócą poprawny i pożądany przez nas wynik. Może to wynikać ze słabej
+stabilności numerycznej algorytmów iteracyjnych dla specyficznych danych wejściowych, co wymusza na nas użycie metody bezpośredniej.
+Warto również wspomnieć o bardzo długim czasie wykonywania obliczeń metodą Gaussa-Seidla w porównaniu do metody Jacobiego. Przeczy to wcześniejszym wnioskom z wykresu
+z danych generowanych z funkcji generate_matrix, gdzie to metoda Jacobiego wypadała gorzej pod względem czasowym. Tym samym można przypuszczać, że wybór odpowiedniego algorytmu
+zależy od danych przekazanych do obliczeń.
